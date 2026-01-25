@@ -1,0 +1,169 @@
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balaji Jewellers | Aximo Creatives</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+
+    <!-- Scripts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Reveal Animation */
+        .reveal-element {
+            opacity: 0;
+            transform: translateY(20px) scale(0.98);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            will-change: opacity, transform;
+        }
+
+        .reveal-element.active {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        /* Minimal Scrollbar */
+        ::-webkit-scrollbar {
+            width: 0px;
+            background: transparent;
+        }
+
+        /* Utilities */
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+
+<body class="bg-neutral-50 text-neutral-900 antialiased selection:bg-neutral-900 selection:text-white">
+
+    <!-- Navigation -->
+    <nav id="navbar"
+        class="fixed top-0 left-0 w-full z-50 px-6 transition-all duration-500 text-white !bg-neutral-900 !py-4">
+        <div class="flex justify-between items-center max-w-screen-2xl mx-auto">
+            <a href="index.html"
+                class="uppercase hover:opacity-70 transition-opacity text-sm font-semibold tracking-tighter z-50">Aximo
+                Creatives</a>
+
+            <div class="hidden md:flex gap-10 text-xs font-medium tracking-wide uppercase">
+                <a href="index.html#about" class="hover:text-neutral-400 transition-colors duration-300">About</a>
+                <a href="works.html" class="hover:text-neutral-400 transition-colors duration-300">Works</a>
+                <a href="index.html#services" class="hover:text-neutral-400 transition-colors duration-300">Approach</a>
+                <a href="index.html#contact" class="hover:text-neutral-400 transition-colors duration-300">Contact</a>
+            </div>
+
+            <button class="md:hidden z-50 text-white hover:text-neutral-300 transition-colors">
+                <iconify-icon icon="solar:hamburger-menu-linear" width="24" stroke-width="1.5"></iconify-icon>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Spacer for fixed navbar -->
+    <div class="h-24 bg-neutral-900"></div>
+
+    <!-- Project Details -->
+    <section class="min-h-screen md:px-12 bg-white pt-12 pr-6 pb-12 pl-6">
+        <div class="max-w-screen-2xl mr-auto ml-auto">
+
+            <!-- Header -->
+            <div class="mb-20 reveal-element">
+                <a href="works.html"
+                    class="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-widest text-neutral-400 hover:text-neutral-900 transition-colors mb-8">
+                    <iconify-icon icon="solar:arrow-left-linear" width="16"></iconify-icon>
+                    Back to Works
+                </a>
+                <h1 class="text-4xl md:text-6xl font-medium tracking-tighter text-neutral-900 mb-4">Balaji Jewellers
+                </h1>
+                <p class="text-neutral-500 font-light text-sm md:text-base max-w-xl leading-relaxed">
+                    A luxurious retail space designed to highlight elegance and craftsmanship.
+                </p>
+            </div>
+
+            <!-- Image Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 reveal-element delay-100">
+                <!-- Image 1 (Large) -->
+                <div class="md:col-span-2">
+                    <img src="assets/balaji_1.jpg" alt="Balaji Jewellers Interior View 1"
+                        class="w-full h-auto object-cover grayscale-0">
+                </div>
+
+                <!-- Image 2 & 3 -->
+                <div>
+                    <img src="assets/balaji_2.jpg" alt="Balaji Jewellers Interior View 2"
+                        class="w-full h-auto object-cover grayscale-0">
+                </div>
+                <div>
+                    <img src="assets/balaji_3.jpg" alt="Balaji Jewellers Interior View 3"
+                        class="w-full h-auto object-cover grayscale-0">
+                </div>
+
+                <!-- Image 4 -->
+                <div class="md:col-span-2">
+                    <img src="assets/balaji_4.jpg" alt="Balaji Jewellers Interior View 4"
+                        class="w-full h-auto object-cover grayscale-0">
+                </div>
+
+            </div>
+
+            <!-- Next Project -->
+            <div class="mt-32 border-t border-neutral-100 pt-16 flex justify-between items-center reveal-element">
+                <span class="text-xs uppercase tracking-widest text-neutral-400">Next Project</span>
+                <a href="urban-calm.html"
+                    class="text-2xl md:text-4xl font-medium tracking-tight hover:opacity-50 transition-opacity">Urban
+                    Calm</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div class="bg-neutral-900 pt-12 pb-12 text-neutral-50 px-4 md:px-4">
+        <div
+            class="w-full mx-auto flex flex-col md:flex-row justify-between items-center text-[10px] text-neutral-600 uppercase tracking-widest">
+            <p class="">© 2026 Aximo Creatives. All rights reserved.</p>
+            <p class="md:mt-0 flex items-center gap-1 mt-4">Designed in India <span
+                    class="w-1 h-1 bg-neutral-600 rounded-full"></span></p>
+        </div>
+    </div>
+
+    <!-- Animation Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.15,
+                rootMargin: "0px 0px -50px 0px"
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.reveal-element').forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+
+</body>
+
+</html>
