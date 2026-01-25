@@ -218,7 +218,16 @@
     </style>
 </head>
 
-<body class="bg-neutral-50 text-neutral-900 antialiased selection:bg-neutral-900 selection:text-white">
+<body class="bg-neutral-50 text-neutral-900 antialiased selection:bg-neutral-900 selection:text-white overflow-hidden">
+
+    <!-- Premium Preloader -->
+    <div id="preloader"
+        class="fixed inset-0 z-[100] flex items-center justify-center bg-neutral-900/95 backdrop-blur-sm transition-transform duration-700 cubic-bezier(0.76, 0, 0.24, 1)">
+        <div class="relative">
+            <h1 id="counter" class="text-8xl md:text-9xl font-light tracking-tighter text-white font-geist">0</h1>
+            <div class="absolute -right-4 top-0 text-xl font-light text-neutral-500">%</div>
+        </div>
+    </div>
 
     <!-- Navigation -->
     <nav id="navbar" class="fixed top-0 left-0 w-full z-50 px-6 transition-all duration-500 text-white">
@@ -469,6 +478,39 @@
     <!-- Animation Script -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // Preloader Logic
+            const preloader = document.getElementById('preloader');
+            const counter = document.getElementById('counter');
+            let count = 0;
+
+            // Disable scrolling initially (handled by body class overflow-hidden)
+
+            const updateCounter = () => {
+                count += Math.floor(Math.random() * 5) + 1;
+                if (count > 100) count = 100;
+
+                counter.textContent = count;
+
+                if (count < 100) {
+                    // Random speed for realistic loading feel
+                    setTimeout(updateCounter, Math.random() * 50 + 20);
+                } else {
+                    // Animation complete
+                    setTimeout(() => {
+                        preloader.classList.add('-translate-y-full');
+                        document.body.classList.remove('overflow-hidden');
+
+                        // Trigger entrance animations after preloader leaves
+                        setTimeout(() => {
+                            // Find the first reveal element and activate it manually if needed, 
+                            // or let the observer handle it as they come into view.
+                        }, 500);
+                    }, 800);
+                }
+            };
+
+            updateCounter();
+
             // Navbar Transition
             const navbar = document.getElementById('navbar');
 
