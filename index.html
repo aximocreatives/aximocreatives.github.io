@@ -520,13 +520,6 @@
             // Preloader Logic
             const preloader = document.getElementById('preloader');
             const counter = document.getElementById('counter');
-            let count = 0;
-
-            // Disable scrolling initially (handled by body class overflow-hidden)
-
-            // Preloader Logic
-            const preloader = document.getElementById('preloader');
-            const counter = document.getElementById('counter');
             const liquidText = document.getElementById('liquid-text');
             let count = 0;
 
@@ -539,7 +532,6 @@
                 counter.textContent = count;
 
                 // Map count (0-100) to background-position-y (100% to 0%)
-                // We add a slight buffer so at 100% it's fully filled (e.g., -10%)
                 const fillLevel = 100 - (count * 1.2);
                 if (liquidText) {
                     liquidText.style.backgroundPositionY = `${fillLevel}%`;
