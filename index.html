@@ -221,12 +221,51 @@
 <body class="bg-neutral-50 text-neutral-900 antialiased selection:bg-neutral-900 selection:text-white overflow-hidden">
 
     <!-- Premium Preloader -->
+    <!-- Premium Preloader -->
     <div id="preloader"
-        class="fixed inset-0 z-[100] flex items-center justify-center bg-neutral-900/95 backdrop-blur-sm transition-transform duration-700 cubic-bezier(0.76, 0, 0.24, 1)">
+        class="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-neutral-900/95 backdrop-blur-sm transition-transform duration-1000 cubic-bezier(0.76, 0, 0.24, 1)">
         <div class="relative">
-            <h1 id="counter" class="text-8xl md:text-9xl font-light tracking-tighter text-white font-geist">0</h1>
-            <div class="absolute -right-4 top-0 text-xl font-light text-neutral-500">%</div>
+            <!-- Back Layer (Empty/Dark) -->
+            <h1
+                class="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter text-neutral-800 select-none font-geist">
+                Aximo Creatives
+            </h1>
+
+            <!-- Front Layer (Liquid Fill) -->
+            <h1 id="liquid-text"
+                class="absolute top-0 left-0 text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter text-transparent bg-clip-text select-none font-geist"
+                style="background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAwIDEwMCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0wLDYwIEMyMDAsMTAgNDAwLDkwIDYwMCw0MCBDODAwLC0xMCAxMDAwLDYwIDEwMDAsNjAgTDEwMDAsMTAwIEwwLDEwMCBaIi8+PC9zdmc+'); 
+                       background-size: 200% 110%; 
+                       background-repeat: repeat-x; 
+                       background-position: 0% 100%;
+                       -webkit-background-clip: text;">
+                Aximo Creatives
+            </h1>
         </div>
+
+        <!-- Percentage Counter -->
+        <div class="mt-4 w-full max-w-[250px] md:max-w-[400px] lg:max-w-[500px] flex justify-end">
+            <span class="text-neutral-500 text-sm font-medium tracking-widest">
+                LOADING <span id="counter" class="text-white ml-2">0</span>%
+            </span>
+        </div>
+
+        <style>
+            @keyframes wave-x {
+                0% {
+                    background-position-x: 0%;
+                }
+
+                100% {
+                    background-position-x: 200%;
+                }
+            }
+
+            #liquid-text {
+                animation: wave-x 2s linear infinite;
+                will-change: background-position;
+            }
+        </style>
     </div>
 
     <!-- Navigation -->
@@ -485,25 +524,38 @@
 
             // Disable scrolling initially (handled by body class overflow-hidden)
 
+            // Preloader Logic
+            const preloader = document.getElementById('preloader');
+            const counter = document.getElementById('counter');
+            const liquidText = document.getElementById('liquid-text');
+            let count = 0;
+
+            // Disable scrolling initially (handled by body class overflow-hidden)
+
             const updateCounter = () => {
-                count += Math.floor(Math.random() * 5) + 1;
+                count += Math.floor(Math.random() * 2) + 1; // Slower increment for smoother fill
                 if (count > 100) count = 100;
 
                 counter.textContent = count;
 
+                // Map count (0-100) to background-position-y (100% to 0%)
+                // We add a slight buffer so at 100% it's fully filled (e.g., -10%)
+                const fillLevel = 100 - (count * 1.2);
+                if (liquidText) {
+                    liquidText.style.backgroundPositionY = `${fillLevel}%`;
+                }
+
                 if (count < 100) {
-                    // Random speed for realistic loading feel
-                    setTimeout(updateCounter, Math.random() * 50 + 20);
+                    setTimeout(updateCounter, Math.random() * 30 + 30);
                 } else {
                     // Animation complete
                     setTimeout(() => {
                         preloader.classList.add('-translate-y-full');
                         document.body.classList.remove('overflow-hidden');
 
-                        // Trigger entrance animations after preloader leaves
+                        // Trigger entrance animations
                         setTimeout(() => {
-                            // Find the first reveal element and activate it manually if needed, 
-                            // or let the observer handle it as they come into view.
+                            // Elements reveal automatically via observer
                         }, 500);
                     }, 800);
                 }
