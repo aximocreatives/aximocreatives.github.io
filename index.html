@@ -491,11 +491,10 @@
             let isMenuOpen = false;
 
             if (menuBtn && mobileMenu) {
-                menuBtn.addEventListener('click', () => {
+                const toggleMenu = () => {
                     isMenuOpen = !isMenuOpen;
                     if (isMenuOpen) {
                         mobileMenu.classList.remove('hidden');
-                        // Small timeout to allow display:block to apply before opacity transition
                         setTimeout(() => mobileMenu.classList.remove('opacity-0'), 10);
                         menuBtn.innerHTML = '<iconify-icon icon="solar:close-square-linear" width="24" stroke-width="1.5"></iconify-icon>';
                     } else {
@@ -503,6 +502,15 @@
                         setTimeout(() => mobileMenu.classList.add('hidden'), 300);
                         menuBtn.innerHTML = '<iconify-icon icon="solar:hamburger-menu-linear" width="24" stroke-width="1.5"></iconify-icon>';
                     }
+                };
+
+                menuBtn.addEventListener('click', toggleMenu);
+
+                // Close menu when a link is clicked
+                mobileMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        toggleMenu();
+                    });
                 });
             }
 
