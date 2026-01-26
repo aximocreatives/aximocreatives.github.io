@@ -521,39 +521,48 @@
             const preloader = document.getElementById('preloader');
             const counter = document.getElementById('counter');
             const liquidText = document.getElementById('liquid-text');
-            let count = 0;
 
-            // Disable scrolling initially (handled by body class overflow-hidden)
-
-            const updateCounter = () => {
-                count += Math.floor(Math.random() * 2) + 1; // Slower increment for smoother fill
-                if (count > 100) count = 100;
-
-                counter.textContent = count;
-
-                // Map count (0-100) to background-position-y (100% to 0%)
-                const fillLevel = 100 - (count * 1.2);
-                if (liquidText) {
-                    liquidText.style.backgroundPositionY = `${fillLevel}%`;
+            // Check if already visited
+            if (sessionStorage.getItem('aximo_visited')) {
+                // If visited, hide preloader immediately
+                if (preloader) {
+                    preloader.style.display = 'none';
                 }
+                document.body.classList.remove('overflow-hidden');
+            } else {
+                // First visit - Run Animation
+                let count = 0;
 
-                if (count < 100) {
-                    setTimeout(updateCounter, Math.random() * 30 + 30);
-                } else {
-                    // Animation complete
-                    setTimeout(() => {
-                        preloader.classList.add('-translate-y-full');
-                        document.body.classList.remove('overflow-hidden');
+                const updateCounter = () => {
+                    count += Math.floor(Math.random() * 4) + 2; // FASTER: Increment by 2-5
+                    if (count > 100) count = 100;
 
-                        // Trigger entrance animations
+                    counter.textContent = count;
+
+                    // Map count (0-100) to background-position-y (100% to 0%)
+                    const fillLevel = 100 - (count * 1.2);
+                    if (liquidText) {
+                        liquidText.style.backgroundPositionY = `${fillLevel}%`;
+                    }
+
+                    if (count < 100) {
+                        // FASTER: 10-30ms delay instead of 30-60ms
+                        setTimeout(updateCounter, Math.random() * 20 + 10);
+                    } else {
+                        // Animation complete
                         setTimeout(() => {
-                            // Elements reveal automatically via observer
-                        }, 500);
-                    }, 800);
-                }
-            };
+                            preloader.classList.add('-translate-y-full');
+                            document.body.classList.remove('overflow-hidden');
 
-            updateCounter();
+                            // Mark as visited in session
+                            sessionStorage.setItem('aximo_visited', 'true');
+
+                        }, 500); // Faster exit delay (500ms instead of 800ms)
+                    }
+                };
+
+                updateCounter();
+            }
 
             // Navbar Transition
             const navbar = document.getElementById('navbar');
