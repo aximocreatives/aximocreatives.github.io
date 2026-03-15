@@ -279,6 +279,8 @@
             <div class="hidden md:flex gap-10 text-xs font-medium tracking-wide uppercase">
                 <a href="#about" class="hover:text-neutral-400 transition-colors duration-300">About</a>
                 <a href="works.html" class="hover:text-neutral-400 transition-colors duration-300">Works</a>
+                <a href="masterclass.html" class="hover:text-neutral-400 transition-colors duration-300">Master
+                    Class</a>
                 <a href="#services" class="hover:text-neutral-400 transition-colors duration-300">Approach</a>
                 <a href="#contact" class="hover:text-neutral-400 transition-colors duration-300">Contact</a>
             </div>
@@ -512,6 +514,9 @@
             class="text-2xl text-white font-light tracking-widest uppercase hover:text-neutral-400 transition-colors">About</a>
         <a href="works.html"
             class="text-2xl text-white font-light tracking-widest uppercase hover:text-neutral-400 transition-colors">Works</a>
+        <a href="masterclass.html"
+            class="text-2xl text-white font-light tracking-widest uppercase hover:text-neutral-400 transition-colors">Master
+            Class</a>
         <a href="index.html#services"
             class="text-2xl text-white font-light tracking-widest uppercase hover:text-neutral-400 transition-colors">Approach</a>
         <a href="index.html#contact"
@@ -630,8 +635,51 @@
             document.querySelectorAll('.reveal-element').forEach(el => {
                 observer.observe(el);
             });
+
+            // Master Class Toast Logic
+            const toast = document.getElementById('mc-toast');
+            const closeToastBtn = document.getElementById('close-toast');
+
+            if (toast && !sessionStorage.getItem('mc_toast_shown')) {
+                // Show after 2 seconds
+                setTimeout(() => {
+                    toast.classList.remove('translate-y-[150%]');
+
+                    // Auto-hide after 8 seconds (2s initial + 6s display duration)
+                    setTimeout(() => {
+                        toast.classList.add('translate-y-[150%]');
+                    }, 6000);
+
+                }, 2000);
+                sessionStorage.setItem('mc_toast_shown', 'true');
+            }
+
+            if (closeToastBtn) {
+                closeToastBtn.addEventListener('click', () => {
+                    toast.classList.add('translate-y-[150%]');
+                });
+            }
         });
     </script>
+
+    <!-- Master Class Toast -->
+    <div id="mc-toast"
+        class="fixed bottom-6 right-4 md:right-6 z-[100] bg-neutral-900/40 backdrop-blur-md border border-neutral-700/50 text-white p-6 md:p-8 shadow-2xl rounded-2xl w-[calc(100%-2rem)] md:w-full md:max-w-sm translate-y-[150%] transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]">
+        <button id="close-toast" class="absolute top-4 right-4 text-neutral-400 hover:text-white transition-colors">
+            <iconify-icon icon="solar:close-circle-linear" width="24"></iconify-icon>
+        </button>
+        <div class="mb-4">
+            <span
+                class="text-[10px] uppercase font-bold tracking-widest bg-white/10 text-white border border-white/20 px-3 py-1 rounded-full">New</span>
+        </div>
+        <h4 class="text-xl md:text-2xl font-medium tracking-tight mb-2">Live 1-on-1 Master Class</h4>
+        <p class="text-sm font-light text-neutral-300 mb-6 leading-relaxed">Learn our exact 3Ds Max workflow for luxury
+            interiors. Limited slots available!</p>
+        <a href="masterclass.html"
+            class="block w-full bg-white text-neutral-900 text-center text-xs font-semibold uppercase tracking-widest py-4 rounded-xl hover:bg-neutral-200 transition-colors">
+            Join Now - ₹999
+        </a>
+    </div>
 
 </body>
 
