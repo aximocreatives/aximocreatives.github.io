@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calm Living: Living Room Design Competition | Aximo Creatives</title>
+
+    <!-- Fonts - exact match from index.html -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+
+    <!-- Scripts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+    <link rel="shortcut icon" href="header_logo.jpg" type="image/jpeg">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Reveal Animation */
+        .reveal-element {
+            opacity: 0;
+            transform: translateY(20px) scale(0.98);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            will-change: opacity, transform;
+        }
+
+        .reveal-element.active {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        /* Minimal Scrollbar */
+        ::-webkit-scrollbar {
+            width: 0px;
+            background: transparent;
+        }
+
+        .glass-nav {
+            background: rgba(25, 25, 25, 0.9);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+
+    <!-- Additional Fonts exact from index.html -->
+    <link id="all-fonts-link-font-geist" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;display=swap">
+    <style id="all-fonts-style-font-geist">
+        .font-geist { font-family: 'Geist', sans-serif !important; }
+    </style>
+    <link id="all-fonts-link-font-roboto" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&amp;display=swap">
+    <style id="all-fonts-style-font-roboto">
+        .font-roboto { font-family: 'Roboto', sans-serif !important; }
+    </style>
+    <link id="all-fonts-link-font-montserrat" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;display=swap">
+    <style id="all-fonts-style-font-montserrat">
+        .font-montserrat { font-family: 'Montserrat', sans-serif !important; }
+    </style>
+    <link id="all-fonts-link-font-poppins" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap">
+    <style id="all-fonts-style-font-poppins">
+        .font-poppins { font-family: 'Poppins', sans-serif !important; }
+    </style>
+    <link id="all-fonts-link-font-playfair" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;900&amp;display=swap">
+    <style id="all-fonts-style-font-playfair">
+        .font-playfair { font-family: 'Playfair Display', serif !important; }
+    </style>
+    <link id="all-fonts-link-font-instrument-serif" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:wght@400;500;600;700&amp;display=swap">
+    <style id="all-fonts-style-font-instrument-serif">
+        .font-instrument-serif { font-family: 'Instrument Serif', serif !important; }
+    </style>
+    <link id="all-fonts-link-font-jakarta" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap">
+    <style id="all-fonts-style-font-jakarta">
+        .font-jakarta { font-family: 'Plus Jakarta Sans', sans-serif !important; }
+    </style>
+</head>
+
+<body class="bg-[#fafafa] text-neutral-900 antialiased selection:bg-neutral-900 selection:text-white">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 px-6 transition-all duration-500 text-white !bg-neutral-900 !py-4">
+        <div class="flex justify-between items-center max-w-screen-2xl mx-auto">
+            <a href="index.html" class="uppercase hover:opacity-70 transition-opacity text-sm font-semibold tracking-tighter z-50">Aximo Creatives</a>
+
+            <div class="hidden md:flex gap-10 text-xs font-medium tracking-wide uppercase">
+                <a href="index.html#about" class="hover:text-neutral-400 transition-colors duration-300">About</a>
+                <a href="works.html" class="hover:text-neutral-400 transition-colors duration-300">Works</a>
+                <a href="masterclass.html" class="hover:text-neutral-400 transition-colors duration-300">Master Class</a>
+                <a href="competition.html" class="text-white border-b border-white pb-1">Competition</a>
+                <a href="index.html#services" class="hover:text-neutral-400 transition-colors duration-300">Approach</a>
+                <a href="index.html#contact" class="hover:text-neutral-400 transition-colors duration-300">Contact</a>
+            </div>
+
+            <button id="mobile-menu-btn" class="md:hidden z-50 text-white hover:text-neutral-300 transition-colors">
+                <iconify-icon icon="solar:hamburger-menu-linear" width="24" stroke-width="1.5"></iconify-icon>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Spacer for fixed navbar -->
+    <div class="h-20 bg-neutral-900"></div>
+
+    <!-- Hero Section -->
+    <header class="relative bg-neutral-900 text-neutral-50 pt-24 pb-32 px-6 md:px-12 overflow-hidden border-b border-neutral-800">
+        <div class="max-w-screen-2xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+            
+            <div class="lg:col-span-7 reveal-element active">
+                <span class="uppercase block text-xs font-medium text-neutral-400 tracking-widest mb-6 border border-neutral-700 w-max px-3 py-1 rounded-full">Arena Competition 1.0</span>
+                <h1 class="text-5xl md:text-7xl lg:text-8xl font-medium tracking-tighter mb-8 leading-[1.1]">
+                    Aximo Arena <br> <span class="font-light italic text-neutral-400">Calm Living.</span>
+                </h1>
+                <p class="md:text-lg font-light text-neutral-300 max-w-lg leading-relaxed mb-10">
+                    Challenge your creativity. Design a premium living room sanctuary focused on mindfulness, spatial layout flow, and materials that age with grace. Showcase your vision on a national stage.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#portal" class="bg-white text-neutral-900 px-8 py-4 text-xs font-semibold uppercase tracking-widest hover:bg-neutral-200 transition-colors text-center">
+                        Register & Submit
+                    </a>
+                </div>
+            </div>
+
+            <!-- Countdown Panel -->
+            <div class="lg:col-span-5 reveal-element active delay-75">
+                <div class="bg-neutral-950 p-8 md:p-10 rounded-2xl border border-neutral-800 shadow-2xl relative">
+                    <span class="bg-white text-neutral-900 text-[10px] uppercase font-bold tracking-widest px-3 py-1 absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full" id="timer-badge">
+                        PENDING
+                    </span>
+                    <h3 class="text-xs uppercase tracking-widest text-neutral-400 font-semibold mb-6 text-center" id="timer-title">Registration Opens In</h3>
+                    
+                    <div class="grid grid-cols-4 gap-4 text-center">
+                        <div class="bg-neutral-900 p-4 rounded-xl border border-neutral-850">
+                            <span id="days" class="text-3xl md:text-4xl font-semibold tracking-tight text-white">00</span>
+                            <p class="text-[9px] text-neutral-500 uppercase tracking-widest mt-1">Days</p>
+                        </div>
+                        <div class="bg-neutral-900 p-4 rounded-xl border border-neutral-850">
+                            <span id="hours" class="text-3xl md:text-4xl font-semibold tracking-tight text-white">00</span>
+                            <p class="text-[9px] text-neutral-500 uppercase tracking-widest mt-1">Hours</p>
+                        </div>
+                        <div class="bg-neutral-900 p-4 rounded-xl border border-neutral-850">
+                            <span id="minutes" class="text-3xl md:text-4xl font-semibold tracking-tight text-white">00</span>
+                            <p class="text-[9px] text-neutral-500 uppercase tracking-widest mt-1">Mins</p>
+                        </div>
+                        <div class="bg-neutral-900 p-4 rounded-xl border border-neutral-850">
+                            <span id="seconds" class="text-3xl md:text-4xl font-semibold tracking-tight text-white">00</span>
+                            <p class="text-[9px] text-neutral-500 uppercase tracking-widest mt-1">Secs</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 pt-6 border-t border-neutral-855 flex justify-between items-center text-xs text-neutral-400">
+                        <span id="timeline-label">Registration starts:</span>
+                        <span class="text-neutral-200 font-semibold tracking-wide" id="timeline-target-date">June 7, 2026</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Interactive Portal Section -->
+    <section id="portal" class="py-24 md:py-32 px-6 md:px-12 bg-neutral-100 border-t border-neutral-200">
+        <div class="max-w-4xl mx-auto">
+            <div class="reveal-element text-center mb-16">
+                <span class="text-[10px] uppercase font-bold tracking-widest text-neutral-500 mb-3 block">GET INVOLVED</span>
+                <h2 class="text-3xl md:text-5xl font-medium tracking-tighter mb-4">Competition Workspace</h2>
+                <p class="text-neutral-500 font-light max-w-xl mx-auto text-sm leading-relaxed">
+                    Register your solo/team details, complete payment, and submit your entries all through this dynamic portal.
+                </p>
+            </div>
+
+            <!-- Steps Progress Header (Streamlined to 3 Steps) -->
+            <div class="grid grid-cols-3 gap-2 border-b border-neutral-200 pb-4 mb-10 text-center text-xs font-semibold tracking-widest uppercase text-neutral-400">
+                <button id="step-tab-1" class="step-tab py-3 border-b-2 border-neutral-900 text-neutral-900 cursor-default transition-all duration-300">
+                    <span class="hidden sm:inline">01. Register</span><span class="sm:hidden">01</span>
+                </button>
+                <button id="step-tab-2" class="step-tab py-3 border-b-2 border-transparent cursor-default transition-all duration-300">
+                    <span class="hidden sm:inline">02. Pay</span><span class="sm:hidden">02</span>
+                </button>
+                <button id="step-tab-3" class="step-tab py-3 border-b-2 border-transparent cursor-default transition-all duration-300">
+                    <span class="hidden sm:inline">03. Submit</span><span class="sm:hidden">03</span>
+                </button>
+            </div>
+
+            <!-- Workspace Screen -->
+            <div class="relative bg-white p-8 md:p-16 shadow-xl shadow-neutral-200/50 rounded-2xl border border-neutral-200 min-h-[350px]">
+                
+                <!-- PRE-REGISTRATION STATE: LOCK OVERLAY (APPLIED GLOBALLY TO WORKSPACE BEFORE JUNE 7) -->
+                <div id="lock-overlay" class="absolute inset-0 bg-white/95 backdrop-blur-[2px] z-30 flex flex-col items-center justify-center text-center p-6 space-y-4 rounded-2xl">
+                    <div class="w-14 h-14 flex items-center justify-center bg-neutral-50 border border-neutral-200 rounded-full text-neutral-400">
+                        <iconify-icon icon="solar:lock-keyhole-minimalistic-linear" width="24"></iconify-icon>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-medium text-neutral-955">Registration opens on June 7, 2026</h3>
+                        <p class="text-xs text-neutral-500 font-light mt-1 max-w-sm mx-auto">Registration details, secure payment gateway, and project board submission forms will fully unlock here as soon as the competition starts.</p>
+                    </div>
+                </div>
+
+                <!-- STEP 1: REGISTRATION DETAILS -->
+                <div id="step-content-1" class="step-content block space-y-6">
+                    <div class="text-center max-w-md mx-auto mb-8">
+                        <h3 class="text-xl font-medium tracking-tight text-neutral-900">Participant Registration</h3>
+                        <p class="text-xs text-neutral-500 font-light mt-1">Provide your details to initiate your registration</p>
+                    </div>
+
+                    <form id="registration-form" class="space-y-6 max-w-lg mx-auto" onsubmit="handleRegistration(event)">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label class="text-[10px] uppercase font-bold tracking-widest text-neutral-450">Team / Participant Name</label>
+                                <input type="text" id="reg-name" required placeholder="Aximo Studio" 
+                                    class="w-full bg-neutral-50 border border-neutral-200 text-neutral-900 rounded-lg px-4 py-3 text-sm font-light focus:outline-none focus:border-neutral-900">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-[10px] uppercase font-bold tracking-widest text-neutral-450">Category</label>
+                                <div class="relative">
+                                    <select id="reg-category" 
+                                        class="w-full bg-neutral-50 border border-neutral-200 text-neutral-900 rounded-lg px-4 py-3 text-sm font-light focus:outline-none focus:border-neutral-900 appearance-none cursor-pointer">
+                                        <option>Student</option>
+                                        <option>Professional</option>
+                                    </select>
+                                    <div class="absolute right-4 top-3.5 text-neutral-400 pointer-events-none">
+                                        <iconify-icon icon="solar:alt-arrow-down-linear" width="14"></iconify-icon>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label class="text-[10px] uppercase font-bold tracking-widest text-neutral-455">Email Address</label>
+                                <input type="email" id="reg-email" required placeholder="participant@example.com" 
+                                    class="w-full bg-neutral-50 border border-neutral-200 text-neutral-900 rounded-lg px-4 py-3 text-sm font-light focus:outline-none focus:border-neutral-900">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-[10px] uppercase font-bold tracking-widest text-neutral-455">Contact Number</label>
+                                <input type="tel" id="reg-phone" required placeholder="+91 XXXXX XXXXX" 
+                                    class="w-full bg-neutral-50 border border-neutral-200 text-neutral-900 rounded-lg px-4 py-3 text-sm font-light focus:outline-none focus:border-neutral-900">
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label class="text-[10px] uppercase font-bold tracking-widest text-neutral-450">Team Size</label>
+                            <div class="flex gap-4">
+                                <label class="flex-1 bg-neutral-50 border border-neutral-200 rounded-lg p-3 text-center cursor-pointer hover:border-neutral-900 transition-colors relative">
+                                    <input type="radio" name="team-size" value="Solo" checked class="absolute opacity-0">
+                                    <span class="text-xs font-semibold uppercase tracking-wider text-neutral-600">Solo</span>
+                                </label>
+                                <label class="flex-1 bg-neutral-50 border border-neutral-200 rounded-lg p-3 text-center cursor-pointer hover:border-neutral-900 transition-colors relative">
+                                    <input type="radio" name="team-size" value="Team of 2" class="absolute opacity-0">
+                                    <span class="text-xs font-semibold uppercase tracking-wider text-neutral-600">2 Members</span>
+                                </label>
+                                <label class="flex-1 bg-neutral-50 border border-neutral-200 rounded-lg p-3 text-center cursor-pointer hover:border-neutral-900 transition-colors relative">
+                                    <input type="radio" name="team-size" value="Team of 3" class="absolute opacity-0">
+                                    <span class="text-xs font-semibold uppercase tracking-wider text-neutral-600">3 Members</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="w-full bg-neutral-900 text-white py-4 text-xs font-semibold uppercase tracking-widest hover:bg-neutral-800 transition-colors rounded-lg flex items-center justify-center gap-2">
+                            Proceed to Payment <iconify-icon icon="solar:arrow-right-linear" width="16"></iconify-icon>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- STEP 2: PAYMENT DETAILS -->
+                <div id="step-content-2" class="step-content hidden space-y-6">
+                    <div class="max-w-md mx-auto text-center space-y-6">
+                        <div class="w-14 h-14 flex items-center justify-center bg-neutral-50 border border-neutral-200 rounded-full mx-auto text-emerald-600">
+                            <iconify-icon icon="solar:card-2-linear" width="24"></iconify-icon>
+                        </div>
+                        <h3 class="text-xl font-medium tracking-tight text-neutral-900">Registration Payment</h3>
+                        
+                        <div class="bg-neutral-50 border border-neutral-200 p-6 rounded-xl space-y-3 text-left">
+                            <div class="flex justify-between items-center text-xs text-neutral-500">
+                                <span>Competition Registrant:</span>
+                                <span class="text-neutral-900 font-semibold" id="summary-name">Aximo Studio</span>
+                            </div>
+                            <div class="flex justify-between items-center text-xs text-neutral-500 pb-3 border-b border-neutral-200">
+                                <span>Category Type:</span>
+                                <span class="text-neutral-900 font-semibold" id="summary-category">Professional</span>
+                            </div>
+                            <div class="flex justify-between items-center pt-2">
+                                <span class="text-sm font-medium text-neutral-700">Registration Entry Fee:</span>
+                                <div class="text-right">
+                                    <span class="text-2xl font-bold tracking-tight text-neutral-950">₹150</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Razorpay Checkout Gateway -->
+                        <div class="space-y-4 pt-4">
+                            <a href="https://rzp.io/rzp/I8694qLW" target="_blank" onclick="revealVerificationBox()" 
+                                class="block w-full bg-neutral-900 text-white py-4 text-xs font-semibold uppercase tracking-widest hover:bg-neutral-800 transition-colors rounded-lg text-center shadow-lg shadow-neutral-200/50">
+                                Open Razorpay Gateway
+                            </a>
+                            <p class="text-[10px] text-neutral-400">Clicking will direct you to complete your transaction securely on Razorpay.</p>
+                        </div>
+
+                        <!-- Verify Receipt Input -->
+                        <div id="payment-verify-box" class="hidden pt-6 border-t border-neutral-200 space-y-4 text-left">
+                            <h4 class="text-xs uppercase tracking-widest font-semibold text-neutral-400">Verify Payment ID to Complete</h4>
+                            <div class="flex gap-4">
+                                <input type="text" id="transaction-id" required placeholder="Enter Razorpay Payment ID (e.g. pay_XXXXX)" 
+                                    class="flex-1 bg-neutral-50 border border-neutral-200 text-neutral-900 rounded-lg px-4 py-3 text-xs font-light focus:outline-none focus:border-neutral-900">
+                                <button onclick="verifyPaymentMock()" class="bg-neutral-900 text-white px-6 text-xs font-semibold uppercase tracking-widest hover:bg-neutral-800 rounded-lg">
+                                    Verify
+                                </button>
+                            </div>
+                            <p id="verify-error" class="text-[10px] text-red-500 hidden">Please enter a valid Razorpay transaction code to proceed.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- STEP 3: PROPOSAL SUBMISSION -->
+                <div id="step-content-3" class="step-content hidden space-y-6">
+                    <div class="text-center max-w-md mx-auto mb-8">
+                        <h3 class="text-xl font-medium tracking-tight text-neutral-900">Project Proposal Submission</h3>
+                        <p class="text-xs text-neutral-500 font-light mt-1">Upload your design presentation showing your renders securely</p>
+                    </div>
+
+                    <div id="submission-form-container" class="space-y-6">
+                        <!-- Registrant Details -->
+                        <div class="bg-neutral-50 p-4 rounded-xl border border-neutral-200 text-xs text-neutral-600 max-w-lg mx-auto flex justify-between items-center">
+                            <div>
+                                <span class="font-semibold text-neutral-500 block uppercase text-[9px] tracking-wider">Competition ID</span>
+                                <span id="portal-comp-id" class="font-mono text-neutral-900 font-bold text-sm">AXM-2026-XXXX</span>
+                            </div>
+                            <div class="text-right">
+                                <span class="font-semibold text-neutral-500 block uppercase text-[9px] tracking-wider">Registrant</span>
+                                <span id="portal-user-name" class="text-neutral-900 font-semibold text-sm">Aximo Studio</span>
+                            </div>
+                        </div>
+
+                        <!-- Secure Form upload details card -->
+                        <div class="bg-neutral-50 border border-neutral-200 p-6 rounded-xl space-y-4 max-w-lg mx-auto">
+                            <h4 class="text-xs uppercase tracking-widest font-bold text-neutral-500">Board Upload Instructions</h4>
+                            <p class="text-xs text-neutral-500 font-light leading-relaxed">
+                                Please upload your design presentation showing your renders (as per your choice of layout/format) through our secure, private Google Form to complete your competition entry.
+                            </p>
+                            <div class="bg-white border border-neutral-200 p-4 rounded-lg text-xs space-y-2">
+                                <div class="flex justify-between">
+                                    <span class="text-neutral-500">Allowed Formats:</span>
+                                    <span class="text-neutral-900 font-semibold">PDF / JPG only</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-neutral-500">Maximum File Size:</span>
+                                    <span class="text-neutral-900 font-semibold">10 MB</span>
+                                </div>
+                                <div class="flex justify-between pt-1 border-t border-neutral-100">
+                                    <span class="text-neutral-500">Your Unique ID:</span>
+                                    <span class="text-neutral-900 font-mono font-bold" id="board-naming-example">AXM-2026-XXXX</span>
+                                </div>
+                            </div>
+                            
+                            <a href="https://forms.gle/DCq8ACYH7FzwuojHA" target="_blank"
+                                class="flex items-center justify-center gap-2.5 w-full bg-neutral-900 hover:bg-neutral-800 text-white py-3.5 text-xs font-semibold uppercase tracking-widest transition-colors rounded-lg text-center">
+                                <iconify-icon icon="solar:arrow-right-up-linear" width="18"></iconify-icon> Open Secure Submission Form
+                            </a>
+                            <p class="text-[9px] text-neutral-450 text-center">Make sure to enter your **Unique ID** (shown above) in the Google Form during upload.</p>
+                        </div>
+
+                        <div class="mt-6 text-center max-w-md mx-auto p-4 border border-emerald-105 bg-emerald-50/50 rounded-xl text-xs font-light text-emerald-800 flex items-center justify-center gap-2">
+                            <iconify-icon icon="solar:check-circle-linear" width="18" class="text-emerald-600 flex-shrink-0"></iconify-icon>
+                            <span>Once you upload your files on the Google Form, your submission is complete. You may close this page.</span>
+                        </div>
+                    </div>
+
+                    <!-- SUBMISSION PHASE LOCKED NOTICE -->
+                    <div id="submission-locked-notice" class="hidden text-center py-10 space-y-4 max-w-md mx-auto">
+                        <div class="w-14 h-14 flex items-center justify-center bg-amber-50 border border-amber-200 rounded-full mx-auto text-amber-600">
+                            <iconify-icon icon="solar:clock-square-linear" width="24"></iconify-icon>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-medium text-neutral-955">Submission Phase Opens on June 14</h4>
+                            <p class="text-xs text-neutral-500 font-light mt-2 max-w-sm mx-auto">
+                                Your registration is complete! Your Competition ID is <strong id="locked-comp-id" class="font-mono text-neutral-900 font-bold">-</strong>. Please save this code safely.
+                            </p>
+                            <p class="text-[11px] text-neutral-450 font-light mt-3 leading-relaxed">
+                                The submission portal will automatically unlock here on June 14, 2026 for you to submit your design presentation showing your renders on our secure submission form.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SUCCESS SCREEN -->
+                <div id="success-screen" class="hidden text-center py-12 space-y-6">
+                    <div class="w-16 h-16 flex items-center justify-center bg-emerald-50 border border-emerald-100 rounded-full mx-auto text-emerald-600">
+                        <iconify-icon icon="solar:check-circle-bold" width="32"></iconify-icon>
+                    </div>
+                    <div class="space-y-3">
+                        <h3 class="text-2xl font-medium tracking-tight text-neutral-900">Proposal Successfully Submitted</h3>
+                        <p class="text-sm text-neutral-500 font-light max-w-sm mx-auto leading-relaxed">
+                            Excellent! Your competition design entry <strong id="success-project-title" class="text-neutral-955"></strong> has been submitted. Check your inbox for confirmation.
+                        </p>
+                    </div>
+                    <div class="pt-4 max-w-xs mx-auto">
+                        <div class="bg-neutral-50 border border-neutral-200 rounded-xl p-4 text-xs font-light text-neutral-550">
+                            Submission Code: <span class="font-mono font-bold text-neutral-900 ml-1" id="submission-code">SUB-9876-AXM</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards Section -->
+    <section class="py-24 md:py-32 px-6 md:px-12 bg-white border-t border-neutral-200">
+        <div class="max-w-screen-2xl mx-auto">
+            <div class="reveal-element text-center mb-20">
+                <span class="text-[10px] uppercase font-bold tracking-widest text-neutral-450 mb-3 block font-medium">RECOGNITION</span>
+                <h2 class="text-3xl md:text-5xl font-medium tracking-tighter mb-4 text-neutral-900">Awards & Cash Prizes</h2>
+                <p class="text-neutral-500 font-light max-w-lg mx-auto text-sm leading-relaxed">
+                    We recognize outstanding spatial narratives, concept novelty, and technical proficiency. A total prize pool of ₹3,000 will be awarded.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- 1st Prize -->
+                <div class="reveal-element border border-neutral-200 rounded-xl p-10 hover:border-neutral-900 transition-colors flex flex-col h-full bg-neutral-50/50 relative group">
+                    <span class="bg-neutral-900 text-white text-[9px] uppercase font-bold tracking-widest px-3 py-1 absolute top-0 right-10 -translate-y-1/2 rounded-full">1ST PLACE</span>
+                    <div class="text-neutral-550 text-4xl mb-6 group-hover:scale-105 transition-transform duration-300">
+                        <iconify-icon icon="solar:cup-bold" width="36" class="text-amber-500"></iconify-icon>
+                    </div>
+                    <h3 class="text-2xl font-medium tracking-tight mb-3 text-neutral-900">Grand Winner</h3>
+                    <p class="text-sm text-neutral-550 font-light mb-8">Awarded for complete alignment of design narrative, exceptional rendering, and detailing accuracy.</p>
+                    <div class="mt-auto">
+                        <div class="text-3xl font-bold tracking-tight text-neutral-900">₹1,500</div>
+                        <div class="text-[9px] uppercase font-bold tracking-widest text-neutral-400 mt-2">Plus Feature & Certificate</div>
+                    </div>
+                </div>
+
+                <!-- 2nd Prize -->
+                <div class="reveal-element border border-neutral-200 rounded-xl p-10 hover:border-neutral-900 transition-colors flex flex-col h-full bg-neutral-50/50 relative group delay-75">
+                    <span class="bg-neutral-700 text-white text-[9px] uppercase font-bold tracking-widest px-3 py-1 absolute top-0 right-10 -translate-y-1/2 rounded-full">2ND PLACE</span>
+                    <div class="text-neutral-550 text-4xl mb-6 group-hover:scale-105 transition-transform duration-300">
+                        <iconify-icon icon="solar:medal-ribbons-star-bold" width="36" class="text-neutral-400"></iconify-icon>
+                    </div>
+                    <h3 class="text-2xl font-medium tracking-tight mb-3 text-neutral-900">Runner Up</h3>
+                    <p class="text-sm text-neutral-550 font-light mb-8">Recognizing remarkable spatial layout logic, unique material selections, and render harmony.</p>
+                    <div class="mt-auto">
+                        <div class="text-3xl font-bold tracking-tight text-neutral-900">₹1,000</div>
+                        <div class="text-[9px] uppercase font-bold tracking-widest text-neutral-400 mt-2">Plus Feature & Certificate</div>
+                    </div>
+                </div>
+
+                <!-- 3rd Prize -->
+                <div class="reveal-element border border-neutral-200 rounded-xl p-10 hover:border-neutral-900 transition-colors flex flex-col h-full bg-neutral-50/50 relative group delay-150">
+                    <span class="bg-neutral-700 text-white text-[9px] uppercase font-bold tracking-widest px-3 py-1 absolute top-0 right-10 -translate-y-1/2 rounded-full">3RD PLACE</span>
+                    <div class="text-neutral-550 text-4xl mb-6 group-hover:scale-105 transition-transform duration-300">
+                        <iconify-icon icon="solar:medal-ribbon-bold" width="36" class="text-amber-800"></iconify-icon>
+                    </div>
+                    <h3 class="text-2xl font-medium tracking-tight mb-3 text-neutral-900">Second Runner</h3>
+                    <p class="text-sm text-neutral-550 font-light mb-8">Commending high creativity, sensory space integration, and excellent contextual planning.</p>
+                    <div class="mt-auto">
+                        <div class="text-3xl font-bold tracking-tight text-neutral-900">₹500</div>
+                        <div class="text-[9px] uppercase font-bold tracking-widest text-neutral-400 mt-2">Plus Feature & Certificate</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Participation Certs -->
+            <div class="reveal-element mt-16 p-8 rounded-xl border border-neutral-200 bg-neutral-50 text-center max-w-3xl mx-auto space-y-4">
+                <h4 class="text-lg font-medium text-neutral-900">Honourable Mentions</h4>
+                <p class="text-xs text-neutral-500 font-light max-w-lg mx-auto">
+                    Highly commended entries will receive online project showcase features across Aximo's portfolio and excellence certificates. All registered participants will receive Participation Certificates.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Timeline Section (4 Key Milestones) -->
+    <section class="py-24 md:py-32 px-6 md:px-12 bg-[#fafafa] border-t border-neutral-200">
+        <div class="max-w-screen-2xl mx-auto">
+            <div class="reveal-element text-center mb-20">
+                <span class="text-[10px] uppercase font-bold tracking-widest text-neutral-500 mb-3 block font-medium">TIMELINE</span>
+                <h2 class="text-3xl md:text-5xl font-medium tracking-tighter mb-4 text-neutral-900">Competition Schedule</h2>
+                <p class="text-neutral-500 font-light max-w-md mx-auto text-sm leading-relaxed">
+                    Make sure to keep an eye on early registration launch dates and strict submission cutoffs.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+                <!-- Timeline 1 -->
+                <div class="reveal-element border border-neutral-200 bg-white p-6 rounded-xl relative space-y-4 flex flex-col justify-between">
+                    <div>
+                        <span class="text-[9px] bg-emerald-50 text-emerald-600 border border-emerald-250 px-2.5 py-0.5 rounded-full font-bold uppercase tracking-widest">STARTS JUNE 7</span>
+                        <h4 class="text-lg font-semibold pt-2 text-neutral-900">Registration Opens</h4>
+                        <p class="text-xs text-neutral-500 font-light mt-2">The workspace portal fully unlocks. Participants can register solo or as a team and complete their secure checkout.</p>
+                    </div>
+                    <div class="text-xs text-neutral-450 border-t border-neutral-100 pt-3 mt-4">
+                        Launch: <span class="text-neutral-700 font-medium">June 7, 2026</span>
+                    </div>
+                </div>
+
+                <!-- Timeline 2 -->
+                <div class="reveal-element border border-neutral-200 bg-white p-6 rounded-xl relative space-y-4 delay-75 flex flex-col justify-between">
+                    <div>
+                        <span class="text-[9px] bg-amber-50 text-amber-600 border border-amber-250 px-2.5 py-0.5 rounded-full font-bold uppercase tracking-widest">ENDS JUNE 14</span>
+                        <h4 class="text-lg font-semibold pt-2 text-neutral-900">Registration Closes</h4>
+                        <p class="text-xs text-neutral-500 font-light mt-2">Registrations officially conclude. The design submission portal opens on the same day for registered teams.</p>
+                    </div>
+                    <div class="text-xs text-neutral-450 border-t border-neutral-100 pt-3 mt-4">
+                        Closing: <span class="text-neutral-700 font-medium">June 14, 2026</span>
+                    </div>
+                </div>
+
+                <!-- Timeline 3 -->
+                <div class="reveal-element border border-neutral-200 bg-white p-6 rounded-xl relative space-y-4 delay-150 flex flex-col justify-between">
+                    <div>
+                        <span class="text-[9px] bg-red-50 text-red-650 border border-red-200 px-2.5 py-0.5 rounded-full font-bold uppercase tracking-widest">DEADLINE JUNE 26</span>
+                        <h4 class="text-lg font-semibold pt-2 text-neutral-900">Submission Cutoff</h4>
+                        <p class="text-xs text-neutral-500 font-light mt-2">All layout boards and concept text files must be uploaded through the workspace portal by this day.</p>
+                    </div>
+                    <div class="text-xs text-neutral-450 border-t border-neutral-100 pt-3 mt-4">
+                        Cutoff: <span class="text-red-600 font-bold">June 26, 2026</span>
+                    </div>
+                </div>
+
+                <!-- Timeline 4 -->
+                <div class="reveal-element border border-neutral-200 bg-white p-6 rounded-xl relative space-y-4 delay-200 flex flex-col justify-between">
+                    <div>
+                        <span class="text-[9px] bg-neutral-50 text-neutral-550 border border-neutral-200 px-2.5 py-0.5 rounded-full font-bold uppercase tracking-widest">AWARDS</span>
+                        <h4 class="text-lg font-semibold pt-2 text-neutral-900">Winner Announcement</h4>
+                        <p class="text-xs text-neutral-500 font-light mt-2">Jury evaluations conclude and winners are officially declared on the Aximo portfolio website.</p>
+                    </div>
+                    <div class="text-xs text-neutral-450 border-t border-neutral-100 pt-3 mt-4">
+                        Announcement: <span class="text-neutral-700 font-medium">July 15, 2026</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Rules Section -->
+    <section class="py-24 md:py-32 px-6 md:px-12 bg-[#fafafa] border-t border-neutral-200">
+        <div class="max-w-3xl mx-auto">
+            <div class="reveal-element text-center mb-16">
+                <span class="text-[10px] uppercase font-bold tracking-widest text-neutral-550 mb-3 block font-medium">ANSWERS</span>
+                <h2 class="text-3xl md:text-5xl font-medium tracking-tighter mb-4 text-neutral-900">Frequently Asked Questions</h2>
+            </div>
+
+            <div class="space-y-4 reveal-element">
+                <!-- FAQ Item 1 -->
+                <div class="border-b border-neutral-200 pb-4">
+                    <button class="w-full flex justify-between items-center py-4 text-left font-medium text-neutral-900 hover:text-neutral-600 transition-colors" onclick="toggleFaq(1)">
+                        <span>Who is eligible to participate in the Calm Living competition?</span>
+                        <iconify-icon icon="solar:add-circle-linear" id="faq-icon-1" class="text-neutral-400 transition-transform duration-300"></iconify-icon>
+                    </button>
+                    <div id="faq-answer-1" class="hidden text-xs text-neutral-500 font-light leading-relaxed pb-4">
+                        The competition is open to students, architects, interior designers, and designers worldwide. Participants can register individually or in teams of up to 3 members.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="border-b border-neutral-200 pb-4">
+                    <button class="w-full flex justify-between items-center py-4 text-left font-medium text-neutral-900 hover:text-neutral-600 transition-colors" onclick="toggleFaq(2)">
+                        <span>What are the exact submission format requirements?</span>
+                        <iconify-icon icon="solar:add-circle-linear" id="faq-icon-2" class="text-neutral-400 transition-transform duration-300"></iconify-icon>
+                    </button>
+                    <div id="faq-answer-2" class="hidden text-xs text-neutral-500 font-light leading-relaxed pb-4">
+                        Your submission must consist of a design presentation showing your renders, in PDF or JPG format (maximum file size of 10MB) uploaded directly through our secure Google Form, as per your choice of layout and design format.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="border-b border-neutral-200 pb-4">
+                    <button class="w-full flex justify-between items-center py-4 text-left font-medium text-neutral-900 hover:text-neutral-600 transition-colors" onclick="toggleFaq(3)">
+                        <span>Can I register multiple teams under the same email?</span>
+                        <iconify-icon icon="solar:add-circle-linear" id="faq-icon-3" class="text-neutral-400 transition-transform duration-300"></iconify-icon>
+                    </button>
+                    <div id="faq-answer-3" class="hidden text-xs text-neutral-500 font-light leading-relaxed pb-4">
+                        Each team registration must be associated with a unique primary email address to prevent validation issues when generating Competition IDs and uploading project narratives.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="border-b border-neutral-200 pb-4">
+                    <button class="w-full flex justify-between items-center py-4 text-left font-medium text-neutral-900 hover:text-neutral-600 transition-colors" onclick="toggleFaq(4)">
+                        <span>How is the secure payment and portal verification handled?</span>
+                        <iconify-icon icon="solar:add-circle-linear" id="faq-icon-4" class="text-neutral-400 transition-transform duration-300"></iconify-icon>
+                    </button>
+                    <div id="faq-answer-4" class="hidden text-xs text-neutral-500 font-light leading-relaxed pb-4">
+                        Payments are securely processed through Razorpay. Once payment is completed, you'll receive a Transaction ID. You can enter this ID in Step 2 of the Portal Widget to instantly unlock the Step 3 Submission screen.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div class="bg-neutral-900 pt-12 pb-12 text-neutral-50 px-4 md:px-4">
+        <div class="max-w-screen-2xl mx-auto flex flex-col md:flex-row justify-between items-center text-[10px] text-neutral-600 uppercase tracking-widest">
+            <p>© 2026 Aximo Creatives. All rights reserved.</p>
+            <p class="md:mt-0 flex items-center gap-1 mt-4">Designed in India <span class="w-1 h-1 bg-neutral-600 rounded-full"></span></p>
+        </div>
+    </div>
+
+    <!-- Mobile Navigation Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-neutral-900 z-40 hidden flex flex-col items-center justify-center space-y-8 opacity-0 transition-opacity duration-300">
+        <a href="index.html" class="text-2xl text-white font-light tracking-widest uppercase hover:text-neutral-400 transition-colors">Home</a>
+        <a href="index.html#about" class="text-2xl text-white font-light tracking-widest uppercase hover:text-neutral-400 transition-colors">About</a>
+        <a href="works.html" class="text-2xl text-white font-light tracking-widest uppercase hover:text-neutral-400 transition-colors">Works</a>
+        <a href="masterclass.html" class="text-2xl text-white font-light tracking-widest uppercase hover:text-neutral-400 transition-colors">Master Class</a>
+        <a href="competition.html" class="text-2xl text-white font-semibold tracking-widest uppercase hover:text-neutral-400 transition-colors border-b border-white">Competition</a>
+        <a href="index.html#services" class="text-2xl text-white font-light tracking-widest uppercase hover:text-neutral-400 transition-colors">Approach</a>
+        <a href="index.html#contact" class="text-2xl text-white font-light tracking-widest uppercase hover:text-neutral-400 transition-colors">Contact</a>
+    </div>
+
+    <!-- Scripting for Live Timer Countdown and Portal Locks -->
+    <script>
+        // Configurable Dates
+        const registrationStartDate = new Date('June 7, 2026 00:00:00');
+        const registrationEndDate = new Date('June 14, 2026 23:59:59');
+        const submissionDeadlineDate = new Date('June 26, 2026 23:59:59');
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Make portal tabs clickable for accessible navigation
+            document.querySelectorAll('.step-tab').forEach((tab, index) => {
+                tab.addEventListener('click', () => {
+                    const targetStep = index + 1;
+                    
+                    // Don't do anything if submissions are active (tabs 1 & 2 are disabled)
+                    const now = new Date().getTime();
+                    const isSubActive = now >= registrationEndDate.getTime() && now < submissionDeadlineDate.getTime();
+                    if (isSubActive && targetStep < 3) return;
+
+                    // Navigation rules:
+                    // 1. Can always go to Step 1
+                    // 2. Can go to Step 2 if registered (has name)
+                    // 3. Can go to Step 3 if payment is verified
+                    if (targetStep === 1) {
+                        currentStep = 1;
+                        saveSession();
+                        updatePortalUI();
+                    } else if (targetStep === 2 && participantData.name) {
+                        currentStep = 2;
+                        saveSession();
+                        updatePortalUI();
+                    } else if (targetStep === 3 && participantData.verified) {
+                        currentStep = 3;
+                        saveSession();
+                        updatePortalUI();
+                    }
+                });
+            });
+
+            // Restore input values from session on page load
+            const nameInput = document.getElementById('reg-name');
+            const emailInput = document.getElementById('reg-email');
+            const phoneInput = document.getElementById('reg-phone');
+            const categorySelect = document.getElementById('reg-category');
+
+            if (nameInput && participantData.name) nameInput.value = participantData.name;
+            if (emailInput && participantData.email) emailInput.value = participantData.email;
+            if (phoneInput && participantData.phone) phoneInput.value = participantData.phone;
+            if (categorySelect && participantData.category) categorySelect.value = participantData.category;
+            
+            if (participantData.size) {
+                const sizeRadio = document.querySelector(`input[name="team-size"][value="${participantData.size}"]`);
+                if (sizeRadio) sizeRadio.checked = true;
+            }
+
+            // Real-time input persistence
+            const saveInputs = () => {
+                participantData.name = nameInput ? nameInput.value : '';
+                participantData.email = emailInput ? emailInput.value : '';
+                participantData.phone = phoneInput ? phoneInput.value : '';
+                participantData.category = categorySelect ? categorySelect.value : 'Professional';
+                saveSession();
+            };
+
+            if (nameInput) nameInput.addEventListener('input', saveInputs);
+            if (emailInput) emailInput.addEventListener('input', saveInputs);
+            if (phoneInput) phoneInput.addEventListener('input', saveInputs);
+            if (categorySelect) categorySelect.addEventListener('change', saveInputs);
+
+            // Team Size Selector Styling
+            const teamSizeLabels = document.querySelectorAll('input[name="team-size"]');
+            const updateTeamSizeSelection = () => {
+                teamSizeLabels.forEach(input => {
+                    const label = input.closest('label');
+                    const span = label.querySelector('span');
+                    if (input.checked) {
+                        label.classList.add('border-neutral-900', 'bg-neutral-900');
+                        label.classList.remove('bg-neutral-50', 'border-neutral-200');
+                        if (span) {
+                            span.classList.remove('text-neutral-600');
+                            span.classList.add('text-white');
+                        }
+                    } else {
+                        label.classList.remove('border-neutral-900', 'bg-neutral-900');
+                        label.classList.add('bg-neutral-50', 'border-neutral-200');
+                        if (span) {
+                            span.classList.remove('text-white');
+                            span.classList.add('text-neutral-600');
+                        }
+                    }
+                });
+            };
+            
+            teamSizeLabels.forEach(input => {
+                input.addEventListener('change', () => {
+                    updateTeamSizeSelection();
+                    if (input.checked) {
+                        participantData.size = input.value;
+                        saveSession();
+                    }
+                });
+            });
+            
+            updateTeamSizeSelection();
+
+            // Mobile Menu Logic
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            let isMenuOpen = false;
+
+            if (menuBtn && mobileMenu) {
+                const toggleMenu = () => {
+                    isMenuOpen = !isMenuOpen;
+                    if (isMenuOpen) {
+                        mobileMenu.classList.remove('hidden');
+                        setTimeout(() => mobileMenu.classList.remove('opacity-0'), 10);
+                        menuBtn.innerHTML = '<iconify-icon icon="solar:close-square-linear" width="24" stroke-width="1.5"></iconify-icon>';
+                    } else {
+                        mobileMenu.classList.add('opacity-0');
+                        setTimeout(() => mobileMenu.classList.add('hidden'), 300);
+                        menuBtn.innerHTML = '<iconify-icon icon="solar:hamburger-menu-linear" width="24" stroke-width="1.5"></iconify-icon>';
+                    }
+                };
+
+                menuBtn.addEventListener('click', toggleMenu);
+
+                mobileMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        if (isMenuOpen) toggleMenu();
+                    });
+                });
+            }
+
+            // Reveal Animation Observer
+            const observerOptions = {
+                threshold: 0.15,
+                rootMargin: "0px 0px -50px 0px"
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.reveal-element').forEach(el => {
+                observer.observe(el);
+            });
+
+            // Countdown Logic and Lock State Controller
+            const updateTimerAndUIStates = () => {
+                const now = new Date().getTime();
+                
+                let targetDate;
+                let state; // 'PRE_REG', 'REG_ACTIVE', 'SUB_ACTIVE', 'CLOSED'
+
+                if (now < registrationStartDate.getTime()) {
+                    targetDate = registrationStartDate;
+                    state = 'PRE_REG';
+                } else if (now < registrationEndDate.getTime()) {
+                    targetDate = registrationEndDate;
+                    state = 'REG_ACTIVE';
+                } else if (now < submissionDeadlineDate.getTime()) {
+                    targetDate = submissionDeadlineDate;
+                    state = 'SUB_ACTIVE';
+                } else {
+                    state = 'CLOSED';
+                }
+
+                // Update text elements based on state
+                const timerBadge = document.getElementById('timer-badge');
+                const timerTitle = document.getElementById('timer-title');
+                const timelineLabel = document.getElementById('timeline-label');
+                const targetText = document.getElementById('timeline-target-date');
+
+                const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+                if (state === 'PRE_REG') {
+                    timerBadge.textContent = "UPCOMING";
+                    timerBadge.className = "bg-amber-100 text-amber-800 text-[10px] uppercase font-bold tracking-widest px-3 py-1 absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border border-amber-200";
+                    timerTitle.textContent = "Registration Opens In";
+                    timelineLabel.textContent = "Registration starts:";
+                    targetText.textContent = `${months[registrationStartDate.getMonth()]} ${registrationStartDate.getDate()}, ${registrationStartDate.getFullYear()}`;
+                    
+                    // Show lock overlay globally on portal
+                    document.getElementById('lock-overlay').classList.remove('hidden');
+                    document.getElementById('lock-overlay').innerHTML = `
+                        <div class="w-14 h-14 flex items-center justify-center bg-neutral-50 border border-neutral-200 rounded-full text-neutral-400">
+                            <iconify-icon icon="solar:lock-keyhole-minimalistic-linear" width="24"></iconify-icon>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-medium text-neutral-955">Registration opens on June 7, 2026</h3>
+                            <p class="text-xs text-neutral-500 font-light mt-1 max-w-sm mx-auto">Registration details, secure payment gateway, and project board submission forms will fully unlock here as soon as the competition starts.</p>
+                        </div>
+                    `;
+                } else if (state === 'REG_ACTIVE') {
+                    timerBadge.textContent = "REGISTRATION OPEN";
+                    timerBadge.className = "bg-emerald-100 text-emerald-800 text-[10px] uppercase font-bold tracking-widest px-3 py-1 absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border border-emerald-250 animate-pulse";
+                    timerTitle.textContent = "Registration Closes In";
+                    timelineLabel.textContent = "Registration deadline:";
+                    targetText.textContent = `${months[registrationEndDate.getMonth()]} ${registrationEndDate.getDate()}, ${registrationEndDate.getFullYear()}`;
+
+                    // Hide lock overlay globally on portal
+                    document.getElementById('lock-overlay').classList.add('hidden');
+                } else if (state === 'SUB_ACTIVE') {
+                    timerBadge.textContent = "SUBMISSIONS OPEN";
+                    timerBadge.className = "bg-emerald-100 text-emerald-800 text-[10px] uppercase font-bold tracking-widest px-3 py-1 absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border border-emerald-250 animate-pulse";
+                    timerTitle.textContent = "Submissions Close In";
+                    timelineLabel.textContent = "Submission deadline:";
+                    targetText.textContent = `${months[submissionDeadlineDate.getMonth()]} ${submissionDeadlineDate.getDate()}, ${submissionDeadlineDate.getFullYear()}`;
+
+                    // Hide lock overlay globally on portal
+                    document.getElementById('lock-overlay').classList.add('hidden');
+                    
+                    // Automatically forward new users to Step 3 because registrations are closed
+                    if (currentStep < 3) {
+                        currentStep = 3;
+                        updatePortalUI();
+                    }
+                } else {
+                    timerBadge.textContent = "CLOSED";
+                    timerBadge.className = "bg-red-100 text-red-800 text-[10px] uppercase font-bold tracking-widest px-3 py-1 absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border border-red-200";
+                    timerTitle.textContent = "Competition Submissions Closed";
+                    timelineLabel.textContent = "Competition ended:";
+                    targetText.textContent = "Closed";
+
+                    document.getElementById('days').textContent = "00";
+                    document.getElementById('hours').textContent = "00";
+                    document.getElementById('minutes').textContent = "00";
+                    document.getElementById('seconds').textContent = "00";
+                    
+                    // Show lock overlay indicating closed
+                    document.getElementById('lock-overlay').classList.remove('hidden');
+                    document.getElementById('lock-overlay').innerHTML = `
+                        <div class="w-14 h-14 flex items-center justify-center bg-red-50 border border-red-100 rounded-full text-red-600">
+                            <iconify-icon icon="solar:block-linear" width="24"></iconify-icon>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-medium text-neutral-955 font-playfair">Competition is Closed</h3>
+                            <p class="text-xs text-neutral-500 font-light mt-1 max-w-sm mx-auto">Registration and submissions for Calm Living 1.0 have officially concluded. Stay tuned for results!</p>
+                        </div>
+                    `;
+                    return;
+                }
+
+                // Compute exact remaining units
+                const distance = targetDate.getTime() - now;
+                const d = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const s = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById('days').textContent = d.toString().padStart(2, '0');
+                document.getElementById('hours').textContent = h.toString().padStart(2, '0');
+                document.getElementById('minutes').textContent = m.toString().padStart(2, '0');
+                document.getElementById('seconds').textContent = s.toString().padStart(2, '0');
+            };
+
+            updateTimerAndUIStates();
+            setInterval(updateTimerAndUIStates, 1000);
+            updatePortalUI();
+        });
+
+        // Portal Steps Handler (3 steps now)
+        let currentStep = 1;
+        let participantData = {
+            name: '',
+            email: '',
+            phone: '',
+            category: 'Professional',
+            size: 'Solo',
+            compId: '',
+            verified: false
+        };
+
+        // Helper to save session
+        const saveSession = () => {
+            localStorage.setItem('aximo_competition_step', currentStep.toString());
+            localStorage.setItem('aximo_competition_data', JSON.stringify(participantData));
+        };
+
+        // Helper to load session
+        const loadSession = () => {
+            const savedStep = localStorage.getItem('aximo_competition_step');
+            const savedData = localStorage.getItem('aximo_competition_data');
+
+            if (savedData) {
+                participantData = JSON.parse(savedData);
+            } else {
+                // Initialize clean default values for production
+                participantData.name = '';
+                participantData.email = '';
+                participantData.phone = '';
+                participantData.category = 'Professional';
+                participantData.size = 'Solo';
+                participantData.compId = '';
+                participantData.verified = false;
+                saveSession();
+            }
+
+            // Global Phase check - If submissions are active, force Step 3
+            const now = new Date().getTime();
+            const isSubActive = now >= registrationEndDate.getTime() && now < submissionDeadlineDate.getTime();
+            if (isSubActive) {
+                currentStep = 3;
+            } else if (savedStep) {
+                currentStep = parseInt(savedStep, 10);
+                // Security check: bounce back if previous steps are not completed
+                if (currentStep === 3 && !participantData.verified) {
+                    currentStep = (participantData.name) ? 2 : 1;
+                } else if (currentStep === 2 && !participantData.name) {
+                    currentStep = 1;
+                }
+            } else {
+                currentStep = 1;
+            }
+        };
+
+        // Load the session immediately when the script executes
+        loadSession();
+
+        const updatePortalUI = () => {
+            const now = new Date().getTime();
+            const isSubActive = now >= registrationEndDate.getTime() && now < submissionDeadlineDate.getTime();
+
+            // Update step tabs border styles and cursor states
+            document.querySelectorAll('.step-tab').forEach((tab, index) => {
+                const targetStep = index + 1;
+                if (isSubActive && index < 2) {
+                    // Disable and style tabs 1 and 2 during submission-only phase
+                    tab.classList.add('opacity-40', 'cursor-not-allowed');
+                    tab.classList.remove('border-neutral-900', 'text-neutral-900', 'cursor-pointer');
+                    tab.classList.add('border-transparent');
+                    tab.style.pointerEvents = 'none'; // fully disable pointer events
+                } else {
+                    tab.classList.remove('opacity-40', 'cursor-not-allowed');
+                    tab.style.pointerEvents = '';
+                    
+                    // Determine if this tab is allowed to be clicked
+                    let isClickable = false;
+                    if (targetStep === 1) {
+                        isClickable = true;
+                    } else if (targetStep === 2 && participantData.name) {
+                        isClickable = true;
+                    } else if (targetStep === 3 && participantData.verified) {
+                        isClickable = true;
+                    }
+
+                    if (isClickable) {
+                        tab.classList.add('cursor-pointer');
+                        tab.classList.remove('cursor-default');
+                    } else {
+                        tab.classList.add('cursor-default');
+                        tab.classList.remove('cursor-pointer');
+                    }
+
+                    if (targetStep === currentStep) {
+                        tab.classList.add('border-neutral-900', 'text-neutral-900');
+                        tab.classList.remove('border-transparent');
+                    } else {
+                        tab.classList.remove('border-neutral-900', 'text-neutral-900');
+                        tab.classList.add('border-transparent');
+                    }
+                }
+            });
+
+            // Update content visibility
+            document.querySelectorAll('.step-content').forEach((content, index) => {
+                if (index + 1 === currentStep) {
+                    content.classList.remove('hidden');
+                    content.classList.add('block');
+                } else {
+                    content.classList.add('hidden');
+                    content.classList.remove('block');
+                }
+            });
+
+            // Dynamic Step 3 lock state handler based on timeline phase
+            const submissionFormContainer = document.getElementById('submission-form-container');
+            const submissionLockedNotice = document.getElementById('submission-locked-notice');
+            if (submissionFormContainer && submissionLockedNotice) {
+                if (isSubActive || participantData.verified) {
+                    submissionFormContainer.classList.remove('hidden');
+                    submissionLockedNotice.classList.add('hidden');
+                } else {
+                    submissionFormContainer.classList.add('hidden');
+                    submissionLockedNotice.classList.remove('hidden');
+                    document.getElementById('locked-comp-id').textContent = participantData.compId || 'AXM-2026-XXXX';
+                }
+            }
+
+            // Update board naming example dynamically
+            const boardNamingExample = document.getElementById('board-naming-example');
+            if (boardNamingExample) {
+                boardNamingExample.textContent = participantData.compId || 'AXM-2026-XXXX';
+            }
+
+            // Populate Step 2 summary card with session details if elements exist
+            const summaryName = document.getElementById('summary-name');
+            const summaryCategory = document.getElementById('summary-category');
+            if (summaryName) summaryName.textContent = participantData.name || '—';
+            if (summaryCategory) summaryCategory.textContent = participantData.category || '—';
+
+            // Populate Step 3 submission details with session details if elements exist
+            const portalCompId = document.getElementById('portal-comp-id');
+            const portalUserName = document.getElementById('portal-user-name');
+            if (portalCompId) portalCompId.textContent = participantData.compId || 'AXM-2026-XXXX';
+            if (portalUserName) portalUserName.textContent = participantData.name || '—';
+
+            // Hide success screen by default
+            document.getElementById('success-screen').classList.add('hidden');
+        };
+
+        const handleRegistration = (e) => {
+            e.preventDefault();
+            
+            participantData.name = document.getElementById('reg-name').value;
+            participantData.email = document.getElementById('reg-email').value;
+            participantData.phone = document.getElementById('reg-phone').value;
+            participantData.category = document.getElementById('reg-category').value;
+            
+            const selectedSize = document.querySelector('input[name="team-size"]:checked');
+            if (selectedSize) participantData.size = selectedSize.value;
+
+            // Generate Competition ID AXM-2026-XXXX
+            const randomCode = Math.floor(1000 + Math.random() * 9000);
+            participantData.compId = `AXM-2026-${randomCode}`;
+
+            // Populate Step 2 summary card
+            document.getElementById('summary-name').textContent = participantData.name;
+            document.getElementById('summary-category').textContent = participantData.category;
+
+            // Advance step
+            currentStep = 2;
+            updatePortalUI();
+        };
+
+        const revealVerificationBox = () => {
+            setTimeout(() => {
+                document.getElementById('payment-verify-box').classList.remove('hidden');
+            }, 1000);
+        };
+
+        const verifyPaymentMock = () => {
+            const txId = document.getElementById('transaction-id').value;
+            if (!txId || txId.length < 4) {
+                document.getElementById('verify-error').classList.remove('hidden');
+                return;
+            }
+
+            document.getElementById('verify-error').classList.add('hidden');
+            participantData.verified = true;
+
+            // Populate portal final step info
+            document.getElementById('portal-comp-id').textContent = participantData.compId;
+            document.getElementById('portal-user-name').textContent = participantData.name;
+
+            // Advance step
+            currentStep = 3;
+            updatePortalUI();
+        };
+
+        const handleSubmission = (e) => {
+            e.preventDefault();
+            const projectTitle = document.getElementById('sub-title').value;
+            const projectDesc = document.getElementById('sub-description').value;
+            const fileName = document.getElementById('sub-filename').value;
+
+            if (!projectTitle || !projectDesc || !fileName) return;
+
+            // Display Success Screen
+            document.querySelectorAll('.step-content').forEach(c => c.classList.add('hidden'));
+            document.getElementById('success-screen').classList.remove('hidden');
+            document.getElementById('success-project-title').textContent = projectTitle;
+
+            const randomSubCode = Math.floor(1000 + Math.random() * 9000);
+            document.getElementById('submission-code').textContent = `SUB-${randomSubCode}-AXM`;
+        };
+
+        // Interactive FAQ Accordion Toggle handler
+        const toggleFaq = (index) => {
+            const answer = document.getElementById(`faq-answer-${index}`);
+            const icon = document.getElementById(`faq-icon-${index}`);
+            
+            if (answer && icon) {
+                const isHidden = answer.classList.contains('hidden');
+                if (isHidden) {
+                    answer.classList.remove('hidden');
+                    icon.setAttribute('icon', 'solar:minus-circle-linear');
+                    icon.classList.add('rotate-180');
+                } else {
+                    answer.classList.add('hidden');
+                    icon.setAttribute('icon', 'solar:add-circle-linear');
+                    icon.classList.remove('rotate-180');
+                }
+            }
+        };
+    </script>
+</body>
+
+</html>
