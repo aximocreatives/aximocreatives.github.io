@@ -614,9 +614,17 @@
     <!-- Scripting for Live Timer Countdown and Portal Locks -->
     <script>
         // Configurable Dates
-        const registrationStartDate = new Date('June 7, 2026 00:00:00');
-        const registrationEndDate = new Date('June 14, 2026 23:59:59');
-        const submissionDeadlineDate = new Date('June 26, 2026 23:59:59');
+        let registrationStartDate = new Date('June 7, 2026 00:00:00');
+        let registrationEndDate = new Date('June 14, 2026 23:59:59');
+        let submissionDeadlineDate = new Date('June 26, 2026 23:59:59');
+
+        // Developer Test Mode Override via Query Parameter ?test=true
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('test') === 'true') {
+            registrationStartDate = new Date(Date.now() - 24 * 60 * 60 * 1000); // 1 day ago
+            registrationEndDate = new Date(Date.now() + 2 * 24 * 60 * 60 * 1000); // 2 days from now
+            submissionDeadlineDate = new Date(Date.now() + 10 * 24 * 60 * 60 * 1000); // 10 days from now
+        }
 
         document.addEventListener('DOMContentLoaded', () => {
             // Make portal tabs clickable for accessible navigation
@@ -895,6 +903,15 @@
 
         // Helper to load session
         const loadSession = () => {
+            // Developer Reset Option via Query Parameter ?reset=true
+            if (urlParams.get('reset') === 'true') {
+                localStorage.removeItem('aximo_competition_step');
+                localStorage.removeItem('aximo_competition_data');
+                const cleanUrl = window.location.protocol + '//' + window.location.host + window.location.pathname + '?test=true';
+                window.location.href = cleanUrl;
+                return;
+            }
+
             const savedStep = localStorage.getItem('aximo_competition_step');
             const savedData = localStorage.getItem('aximo_competition_data');
 
